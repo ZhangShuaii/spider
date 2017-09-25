@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({limit:'10mb', extended: true }));
 var dcArr = [];
 var spiderService = require('./spiderService');
 var updateTime = new Date();
-
+var year = 2017;
 app.post('/', function (req, res) {
     if(req.body){
   	var fs = require("fs");
@@ -16,7 +16,7 @@ app.post('/', function (req, res) {
     dcArr.push(dcJson);
 
     if(dcArr.length>=1500){
-        spiderService.setPoorFamilyInfo(2016,dcArr);
+        spiderService.setPoorFamilyInfo(year,dcArr);
         dcArr = [];
         updateTime = new Date();
     }
@@ -28,7 +28,7 @@ app.post('/', function (req, res) {
 setInterval(function(){
   if((new Date() - updateTime) > (1000*60)){
     if(dcArr.length > 0 ){
-      spiderService.setPoorFamilyInfo(2016,dcArr);
+      spiderService.setPoorFamilyInfo(year,dcArr);
       dcArr = [];
       updateTime = new Date();
       console.log('timecheck update');

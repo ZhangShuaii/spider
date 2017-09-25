@@ -42,7 +42,6 @@ var familyInfoParse2 = function(familyInfo2){
 	poorFamilyInfo.isDifficultWater =familyInfo2.AAC311 ;
 	poorFamilyInfo.mainFuelType =familyInfo2.AAC320 ;
 	poorFamilyInfo.hasCleanWC =familyInfo2.AAC319 ;
-	// poorFamilyInfo.hasCleanWC =familyInfo2.AAC319 ;
 };
 
 //result3
@@ -56,6 +55,9 @@ var incomeParse = function(income){
 	poorFamilyInfo.averageFund = income.AAC082 ;
 	poorFamilyInfo.resourceIncome = income.AAC072 ;
 	poorFamilyInfo.transferIncome = income.AAC085 ;
+	poorFamilyInfo.otherTransferIncome = income.AAC083 ;
+	poorFamilyInfo.familyPlanningFund = income.AAC076 ;
+	poorFamilyInfo.ecologyFund = income.AAC078 ;
 };
 
 //result2

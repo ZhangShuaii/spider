@@ -1,4 +1,6 @@
 /*查询单户贫困户信息*/
+window.HttpService = HttpService;
+
         HttpService.setParameter( "AAR008", "341503018005" );  //地区编号	
 		HttpService.setParameter( "aac001", 3111346422 );		//户编号
 		HttpService.setParameter("AAR040", 2016);
